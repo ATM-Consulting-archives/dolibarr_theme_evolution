@@ -1337,6 +1337,16 @@ div#tmenu_tooltip {
 <?php } else { ?>
 	padding-<?php echo $right; ?>: <?php echo ($maxwidthloginblock - 10); ?>px;
 <?php } ?>
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+
 }
 
 div.tmenusep {
@@ -3601,16 +3611,22 @@ table.valid {
 div.ui-tooltip {
 	max-width: <?php print dol_size(600,'width'); ?>px !important;
 }
-.mytooltip {
-	border-top: solid 1px #BBBBBB;
-	border-<?php print $left; ?>: solid 1px #BBBBBB;
-	border-<?php print $right; ?>: solid 1px #444444;
-	border-bottom: solid 1px #444444;
-	padding: 5px 20px;
+div.ui-tooltip.mytooltip {
+	border: none !important;
+	padding: 10px 15px;
 	border-radius: 0;
-	box-shadow: 0 0 4px grey;
+	
 	margin: 2px;
 	font-stretch: condensed;
+
+	-moz-box-shadow: 0.5px 0.5px 5px 0px #656565;
+	-webkit-box-shadow: 0.5px 0.5px 5px 0px #656565;
+	-o-box-shadow: 0.5px 0.5px 5px 0px #656565;
+	box-shadow: 0.5px 0.5px 5px 0px #656565;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+
+	background: rgba(0, 0, 0, 0.9) !important;  
+	color : #fff; 
 }
 
 

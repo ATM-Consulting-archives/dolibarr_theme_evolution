@@ -1401,7 +1401,6 @@ a.tmenusel:link, a.tmenusel:visited, a.tmenusel:hover, a.tmenusel:active {
 	text-decoration: none !important;
 }
 
-
 ul.tmenu {	/* t r b l */
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
@@ -1430,6 +1429,30 @@ li.tmenusel, li.tmenu:hover {
     background: rgba(0, 0, 0, 0.1);
 	/* background: rgb(<?php echo $colorbackhmenu1 ?>); */
 }
+
+li.tmenusel::after, li.tmenu:hover::after{
+	content: "";
+	position:absolute;
+	bottom:0px;
+	left: 50%;
+	left: calc(50% - 6px);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0px 6px 5px 6px;
+	border-color:  transparent transparent #ffffff transparent;
+}
+li.tmenusel::before, li.tmenu:hover::before{
+	content: "";
+	position:absolute;
+	top:0px;
+	left:0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+}
+
+
 .tmenuend .tmenuleft { width: 0px; }
 .tmenuend { display: none; }
 div.tmenuleft
@@ -1507,7 +1530,7 @@ a.tmenuimage:hover{
 /* Do not load menu img for other if hidden to save bandwidth */
 <?php if (empty($dol_hide_topmenu)) { ?>
 
-.mainmenu:before{  
+.mainmenu::before{  
     /* font part */
     font-family: FontAwesome;
     font-weight: normal;
@@ -1523,27 +1546,27 @@ a.tmenuimage:hover{
 }
 
 
-.mainmenu.home:before{
+.mainmenu.home::before{
 	content: "\f015";
 }
 
-div.mainmenu.billing:before {
+div.mainmenu.billing::before {
     content: "\f283";
 }
 
-div.mainmenu.accountancy:before {
+div.mainmenu.accountancy::before {
 	content: "\f1c0";
 }
 
-div.mainmenu.agenda:before {
+div.mainmenu.agenda::before {
 	content: "\f073";
 }
 
-div.mainmenu.bank:before {
+div.mainmenu.bank::before {
     content: "\f0d6";
 }
 
-div.mainmenu.cashdesk:before {
+div.mainmenu.cashdesk::before {
 	content: "\f07a";
 }
 
@@ -1551,16 +1574,16 @@ div.mainmenu.takepos {
 	background-image: url(<?php echo dol_buildpath($path.'/theme/'.$theme.'/img/menus/pointofsale_over.png',1) ?>);
 }
 
-div.mainmenu.companies:before {
+div.mainmenu.companies::before {
 	content: "\f2c3";
 	/*content: "\f0f7";*/
 }
 
-div.mainmenu.commercial:before {
+div.mainmenu.commercial::before {
 	content: "\f2b5";
 }
 
-div.mainmenu.ecm:before {
+div.mainmenu.ecm::before {
 	content: "\f07c";
 }
 
@@ -1568,40 +1591,40 @@ div.mainmenu.externalsite {
 	background-image: url(<?php echo dol_buildpath($path.'/theme/'.$theme.'/img/menus/externalsite_over.png',1) ?>);
 }
 
-div.mainmenu.ftp:before {
+div.mainmenu.ftp::before {
     content: "\f0ed";
 }
 
-div.mainmenu.hrm:before {
+div.mainmenu.hrm::before {
 	content: "\f2be";
 }
 
-div.mainmenu.members:before {
+div.mainmenu.members::before {
 	content: "\f0c0";
 }
 
-div.mainmenu.products:before {
+div.mainmenu.products::before {
 	/* content: "\f49e"; /* font awesome 5 */
 	content: "\f1b3";
 	content: "\f02a"; /* bar code */
 }
 
-div.mainmenu.project:before {
+div.mainmenu.project::before {
 	/*content: "\f1e0";*/
 	/*content: "\f542"; /*font awesome 5 */
 	content: "\f0e8";
 }
 
-div.mainmenu.ticket:before {
+div.mainmenu.ticket::before {
     content: "\f24a"; /* wired */
 	content: "\f249"; /* fil */
 }
 
-div.mainmenu.tools:before {
+div.mainmenu.tools::before {
 	content: "\f0ad";
 }
 
-div.mainmenu.website:before {
+div.mainmenu.website::before {
 	content: "\f0ac";
 }
 

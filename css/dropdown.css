@@ -1,0 +1,24 @@
+
+.dropdown {
+	display: none;
+	position: absolute;
+	margin-top: 6px;
+	background: linear-gradient(to bottom right, white, #F8F8F8) !important;
+	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+}
+
+.dropdown::after {
+	content: '';
+	position: absolute;
+	left: 30px;
+	top: -8px;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid white;
+}
+
+.dropdown:hover::after {
+	border-bottom: 8px solid #F6F7F9;
+}

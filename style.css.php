@@ -1842,7 +1842,7 @@ div.login_block {
 	<?php print $right; ?>: 0;
 	top: <?php print $disableimages?'4px':'0'; ?>;
 	font-weight: bold;
-	<?php echo (empty($disableimages) && $maxwidthloginblock)?'max-width: '.$maxwidthloginblock.'px;':''; ?>
+	<?php //echo (empty($disableimages) && $maxwidthloginblock)?'max-width: '.$maxwidthloginblock.'px;':''; ?>
 	<?php if (GETPOST('optioncss','aZ09') == 'print') { ?>
 	display: none;
 	<?php } ?>
@@ -1867,10 +1867,10 @@ div.login a:hover {
 }
 div.login_block_user {
 	display: inline-block;
-	padding-top: 3px;
-	<?php if (empty($conf->global->THEME_TOPMENU_DISABLE_IMAGE)) { ?>
+	/*<?php if (empty($conf->global->THEME_TOPMENU_DISABLE_IMAGE)) { ?>
 	min-width: 120px;
-	<?php } ?>
+	<?php } ?>*/
+	
 }
 div.login_block_other {
 	display: inline-block;
@@ -1882,6 +1882,8 @@ div.login_block_other { padding-top: 3px; text-align: right; }
 	vertical-align: top;
 	padding: 0px 3px 0px 4px !important;
 	height: 16px;
+	line-height: 50px;
+	height: 50px;
 }
 .atoplogin, .atoplogin:hover {
 	color: #<?php echo $colortextbackhmenu; ?> !important;

@@ -1876,7 +1876,7 @@ div.login_block_other {
 	display: inline-block;
 	clear: <?php echo $disableimages?'none':'both'; ?>;
 }
-div.login_block_other { padding-top: 3px; text-align: right; }
+div.login_block_other { padding-top: 0; text-align: right; }
 .login_block_elem {
 	float: right;
 	vertical-align: top;
@@ -1918,9 +1918,9 @@ img.login, img.printer, img.entity {
 	font-weight: bold;
 }
 .userimg.atoplogin img.userphoto, .userimgatoplogin img.userphoto {		/* size for user photo in login bar */
-	width: 16px;
-    height: 16px;
-    border-radius: 8px;
+	width: 32px;
+    height: 32px;
+    border-radius: 50%;
     background-size: contain;
     background-size: contain;
 }
